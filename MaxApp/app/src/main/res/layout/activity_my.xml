@@ -17,21 +17,23 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
-            <EditText android:id="@+id/edit_message"
+            <EditText android:id="@+id/edit_ip"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/edit_message" />
+                android:hint="@string/edit_ip" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_send"
-                android:onClick="sendMessage" />
-            <Button
+                android:text="@string/button_updateIp"
+                android:onClick="UpdateIp" />
+            <Button android:id="@+id/startPauseButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_stopResume"
-                android:onClick="stopOrResume" />
+                android:text="@string/button_start"
+                android:onClick="startOrPause"
+                android:textColor="#ffffffff"
+                android:background="#ff00ff00"/>
         </LinearLayout>
 
         <ScrollView android:id="@+id/messagesScrollView"

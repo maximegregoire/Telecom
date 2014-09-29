@@ -3,6 +3,8 @@ package com.example.max.maxapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,34 +15,78 @@ import android.util.FloatMath;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.apache.http.conn.util.InetAddressUtils;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.DatagramSocketImpl;
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.nio.ByteBuffer;
 
 
 public class MyActivity extends Activity implements SensorEventListener{
     public final static String EXTRA_MESSAGE = "com.example.max.maxapp.DisplayMessageActivity";
+    public final int PORT = 7777;
+    public final int BYTES_IN_FLOAT = 4;
 
     private SensorManager sensorManager;
     private Sensor mGyroSensor;
-    private EditText editText;
+
+    private EditText ipText;
     private TextView textView;
-    private boolean isSensorRegistered;
+    private Button startPauseButton;
+
+    private boolean isSensorInitialized;
+    private DatagramSocket socket;
+    private InetAddress netAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-        editText = (EditText) findViewById(R.id.edit_message);
+
+        ipText = (EditText) findViewById(R.id.edit_ip);
         textView = (TextView) findViewById(R.id.messages);
+        startPauseButton = (Button) findViewById(R.id.startPauseButton);
+
+        try {
+           socket = new DatagramSocket(PORT);
+            netAddress = InetAddress.getByName("127.0.0.1");
+        } catch (SocketException e) {
+            e.printStackTrace();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        mGyroSensor= sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        onPause();
+        isSensorInitialized = false;
     }
 
     @Override
     public final void onSensorChanged(SensorEvent event) {
         textView.setText(event.values[0] + "\n\n" + event.values[1] + "\n" + event.values[2]);
+
+        DatagramPacket p = new DatagramPacket(
+                ByteBuffer.allocate(BYTES_IN_FLOAT).putFloat(event.values[1]).array(),
+                BYTES_IN_FLOAT,
+                netAddress,
+                PORT);
+        try {
+            socket.connect(netAddress, PORT);
+            socket.send(p);
+        } catch (IOException e) {
+            //e.printStackTrace();
+        }
     }
 
     @Override
@@ -64,7 +110,6 @@ public class MyActivity extends Activity implements SensorEventListener{
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
     }
 
     @Override
@@ -72,7 +117,6 @@ public class MyActivity extends Activity implements SensorEventListener{
         // Register a listener for the sensor.
         super.onResume();
         sensorManager.registerListener(this, mGyroSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        isSensorRegistered = true;
     }
 
     @Override
@@ -80,26 +124,49 @@ public class MyActivity extends Activity implements SensorEventListener{
         // unregister listener
         super.onPause();
         sensorManager.unregisterListener(this);
-        isSensorRegistered = false;
     }
 
-    public void sendMessage(View view)
+    public void UpdateIp(View view)
     {
-        String message = editText.getText().toString();
-        ScrollView scrollView = (ScrollView) findViewById(R.id.messagesScrollView);
-        textView.append(message + "  Azimuth:" + "\n");
-        scrollView.fullScroll(ScrollView.FOCUS_DOWN);
-    }
-
-    public void stopOrResume(View view)
-    {
-        if (isSensorRegistered)
+        String message = ipText.getText().toString();
+        if (!InetAddressUtils.isIPv4Address(message))
         {
+            printInvalidIp();
+        }
+        else {
+            try {
+                netAddress = InetAddress.getByName(message);
+            } catch (UnknownHostException e) {
+                printInvalidIp();
+            }
+        }
+    }
+
+    public void startOrPause(View view)
+    {
+        if (isSensorInitialized)
+        {
+            startPauseButton.setText(R.string.button_start);
+            startPauseButton.setBackgroundColor(Color.GREEN);
+            startPauseButton.setTextColor(Color.WHITE);
+            isSensorInitialized = false;
             onPause();
         }
         else
         {
+            mGyroSensor= sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+            startPauseButton.setText(R.string.button_pause);
+            startPauseButton.setBackgroundColor(Color.RED);
+            startPauseButton.setTextColor(Color.WHITE);
+            isSensorInitialized = true;
             onResume();
         }
     }
+
+    private void printInvalidIp()
+    {
+        Toast toast = Toast.makeText(getApplicationContext(), R.string.invalid_ip, Toast.LENGTH_LONG);
+        toast.show();
+    }
+
 }
