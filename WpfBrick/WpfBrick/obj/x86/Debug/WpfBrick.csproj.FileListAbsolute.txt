@@ -1,0 +1,66 @@
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\bin\Debug\WpfBrick.exe
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\bin\Debug\WpfBrick.pdb
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.baml
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.g.cs
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\App.g.cs
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick_MarkupCompile.cache
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.g.resources
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.Properties.Resources.resources
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\ResGen.read.1.tlog
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\ResGen.write.1.tlog
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.exe
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.pdb
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\Ball.baml
+c:\users\alain\documents\visual studio 2010\Projects\WpfBrick\WpfBrick\obj\x86\Debug\Ball.g.cs
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.exe
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.pdb
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\bin\Debug\WpfBrick.exe
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\bin\Debug\WpfBrick.pdb
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\Ball.baml
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\Ball.g.cs
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick_MarkupCompile.cache
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.g.resources
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.Properties.Resources.resources
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\ResGen.read.1.tlog
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\ResGen.write.1.tlog
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\Brick.baml
+C:\Documents and Settings\bertrand\My Documents\Visual Studio 10\Projects\WpfBrick\WpfBrick\obj\x86\Debug\Brick.g.cs
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.exe
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.pdb
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\bin\Debug\WpfBrick.exe
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\bin\Debug\WpfBrick.pdb
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.csprojResolveAssemblyReference.cache
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\Ball.baml
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\Brick.baml
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.baml
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\Ball.g.cs
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\Brick.g.cs
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\App.g.cs
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick_MarkupCompile.cache
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.g.resources
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.Properties.Resources.resources
+C:\Users\Max\Downloads\WpfBrick\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.csproj.GenerateResource.Cache
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.exe
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.pdb
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\bin\Debug\WpfBrick.exe
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\bin\Debug\WpfBrick.pdb
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.csprojResolveAssemblyReference.cache
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\Ball.baml
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\Brick.baml
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.baml
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\Ball.g.cs
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\Brick.g.cs
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\App.g.cs
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick_MarkupCompile.cache
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.g.resources
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.Properties.Resources.resources
+C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.csproj.GenerateResource.Cache

@@ -1,0 +1,10 @@
+﻿<Window x:Class="WpfBrick.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WpfBrick" ResizeMode="NoResize" MouseLeftButtonDown="Window_MouseLeftButtonDown" Height="400" Width="300">
+    <Grid x:Name="container">
+        <Canvas x:Name="layoutRoot" >
+            <Border x:Name="paddle" Background="Blue" Width="40" Height="10" Canvas.Top="345" CornerRadius="3" BorderBrush="DarkBlue" BorderThickness="1"/>
+        </Canvas>
+    </Grid>
+</Window>
