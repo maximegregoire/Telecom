@@ -9,7 +9,9 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.text.method.ScrollingMovementMethod;
 import android.util.FloatMath;
 import android.view.Menu;
@@ -29,6 +31,7 @@ import java.net.DatagramSocket;
 import java.net.DatagramSocketImpl;
 import java.net.Inet4Address;
 import java.net.InetAddress;
+import java.net.SocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
@@ -38,6 +41,9 @@ public class MyActivity extends Activity implements SensorEventListener{
     public final static String EXTRA_MESSAGE = "com.example.max.maxapp.DisplayMessageActivity";
     public final int PORT = 7777;
     public final int BYTES_IN_FLOAT = 4;
+
+    // max byte value(127) / max sensor value(10)
+    public final int SENSOR_MULTIPLE = 12;
 
     private SensorManager sensorManager;
     private Sensor mGyroSensor;
@@ -55,12 +61,18 @@ public class MyActivity extends Activity implements SensorEventListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         ipText = (EditText) findViewById(R.id.edit_ip);
         textView = (TextView) findViewById(R.id.messages);
         startPauseButton = (Button) findViewById(R.id.startPauseButton);
 
         try {
-           socket = new DatagramSocket(PORT);
+            socket = new DatagramSocket(PORT);
+            socket.setBroadcast(true);
+            socket.setSoTimeout(500);
+            SocketAddress sa = socket.getLocalSocketAddress();
             netAddress = InetAddress.getByName("127.0.0.1");
         } catch (SocketException e) {
             e.printStackTrace();
@@ -75,17 +87,20 @@ public class MyActivity extends Activity implements SensorEventListener{
     @Override
     public final void onSensorChanged(SensorEvent event) {
         textView.setText(event.values[0] + "\n\n" + event.values[1] + "\n" + event.values[2]);
-
+        byte[] data = new byte[]{(byte)(event.values[1]*SENSOR_MULTIPLE)};
+        //byte[] arr = ByteBuffer.allocate(BYTES_IN_FLOAT).putFloat(event.values[1]).array();
         DatagramPacket p = new DatagramPacket(
-                ByteBuffer.allocate(BYTES_IN_FLOAT).putFloat(event.values[1]).array(),
-                BYTES_IN_FLOAT,
+                data,
+                1,
                 netAddress,
                 PORT);
-        try {
-            socket.connect(netAddress, PORT);
+        try
+        {
             socket.send(p);
-        } catch (IOException e) {
-            //e.printStackTrace();
+        }
+         catch (Exception e)
+         {
+            e.printStackTrace();
         }
     }
 
@@ -154,6 +169,21 @@ public class MyActivity extends Activity implements SensorEventListener{
         }
         else
         {
+            byte[] data = new byte[]{-127};
+            //byte[] arr = ByteBuffer.allocate(BYTES_IN_FLOAT).putFloat(event.values[1]).array();
+            DatagramPacket p = new DatagramPacket(
+                    data,
+                    1,
+                    netAddress,
+                    PORT);
+            try
+            {
+                socket.send(p);
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
             mGyroSensor= sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
             startPauseButton.setText(R.string.button_pause);
             startPauseButton.setBackgroundColor(Color.RED);

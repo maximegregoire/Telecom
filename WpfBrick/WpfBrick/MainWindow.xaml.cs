@@ -31,7 +31,10 @@ namespace WpfBrick
 
         public UdpClient receiver;
         public IPEndPoint groupEP;
+
         public const bool MaxIsAwesome = true;
+        public const float SensorAngle = 40;
+        public const int PaddleSpeed = 20;
 
         /// <summary>
         /// The main game look timer (will invoke gameLoop_Tick every 20 mili sec.)
@@ -155,26 +158,15 @@ namespace WpfBrick
         {
             while (MaxIsAwesome)
             {
-
                 Byte[] receiveBytes = receiver.Receive(ref groupEP);
-                string returnData = Encoding.ASCII.GetString(receiveBytes);
-                Console.Write(returnData);
-                string orientationString = returnData.Split()[4];
-                orientationString = orientationString.Substring(0, 6);
-                double orientation = double.Parse(orientationString, new System.Globalization.CultureInfo("en-US"));
-                this.Dispatcher.Invoke((Action)(() => {
-                    if (orientation < -25)
-                    {
-                        if (PaddleX >= 247)
-                        {
-                            PaddleX = 250;
-                        }
-                        else
-                        {
-                            PaddleX += 3;
-                        }
-                    }
-                    else if (orientation > 25)
+                sbyte orientation = (sbyte)receiveBytes[0];
+                Console.Write(orientation + "\n");
+                //string orientationString = returnData.Split()[4];
+                //orientationString = orientationString.Substring(0, 6);
+                //double orientation = double.Parse(orientationString, new System.Globalization.CultureInfo("en-US"));
+                this.Dispatcher.Invoke((Action)(() =>
+                {
+                    if (orientation < -SensorAngle)
                     {
                         if (PaddleX <= 3)
                         {
@@ -182,7 +174,18 @@ namespace WpfBrick
                         }
                         else
                         {
-                            PaddleX -= 3;
+                            PaddleX += (orientation + SensorAngle)/PaddleSpeed;
+                        }
+                    }
+                    else if (orientation > SensorAngle)
+                    {
+                        if (PaddleX >= 247)
+                        {
+                            PaddleX = 250;
+                        }
+                        else
+                        {
+                            PaddleX += (orientation - SensorAngle) / PaddleSpeed;
                         }
                     }
                 }));

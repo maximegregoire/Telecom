@@ -8,6 +8,7 @@
     <string name="button_updateIp">Update IP</string>
     <string name="button_start">Start</string>
     <string name="button_pause">Pause</string>
+    <string name="button_startGame">Start Game</string>
 
     <string name="title_activity_display_message">My Message</string>
     <string name="your_messages">Messages\n\r</string>

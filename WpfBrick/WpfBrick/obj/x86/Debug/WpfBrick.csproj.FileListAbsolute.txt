@@ -64,3 +64,19 @@ C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick_MarkupCompile.cach
 C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.g.resources
 C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.Properties.Resources.resources
 C:\Users\Max\Dropbox\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.csproj.GenerateResource.Cache
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.exe
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.pdb
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\bin\Debug\WpfBrick.exe
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\bin\Debug\WpfBrick.pdb
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.csprojResolveAssemblyReference.cache
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\Ball.baml
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\Brick.baml
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.baml
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\Ball.g.cs
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\Brick.g.cs
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\App.g.cs
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick_MarkupCompile.cache
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.g.resources
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.Properties.Resources.resources
+C:\Users\Max\Dropbox\Telecom assignments\Project\Telecom-master\Telecom-master\WpfBrick\WpfBrick\obj\x86\Debug\WpfBrick.csproj.GenerateResource.Cache
